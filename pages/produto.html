@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +8,152 @@
     <link rel="stylesheet" href="produto.css">
     <link rel="stylesheet" href="itemProduto.css">
     <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="cores.css">
 </head>
+
 <body>
-    
+    <header>
+        <nav class="navbar">
+            <div class="logo"></div>
+            <ul class="nav-links">
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Cortinas</a></li>
+                <li><a href="#">Sob Medida</a></li>
+                <li><a href="#">Ambientes</a></li>
+            </ul>
+            <div class="pesquisar">
+                <form action="/buscar" method="get">
+                    <input type="search" name="buscar" placeholder="Pesquisar...">
+                    <button type="submit">Buscar</button>
+                </form>
+            </div>
+            <div class="user-actions">
+                <div class="login"></div>
+                <div class="cadastro"></div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- Seção do produto -->
+        <section class="secaoProduto">
+            <div class="imagensProduto">
+                <!-- Miniaturas -->
+                <div class="thumbnails">
+                    <img src="#" alt="Thumbnail1" onclick="alteraImagemPrincipal">
+                    <img src="#" alt="Thumbnail2" onclick="alteraImagemPrincipal">
+                    <img src="#" alt="Thumbnail3" onclick="alteraImagemPrincipal">
+                </div>
+                <!-- Imagem principal -->
+                <div class="imagemPrincipal">
+                    <img src="#" alt="" onclick="expandeImagemPrincipal">
+                </div>
+
+                    <div class="imagemPrincipalExpandida">
+                    <button class="botaoDeNavegacaoImagemPrincipal"> < </button>
+                        <img src="#" alt="">
+                    <button class="botaoDeNavegacaoImagemPrincipal"> > </button>
+                    <nav class="ilustraThumbnailsExpandida">
+                        <img src="#" alt="Thumbnail1" onclick="alteraImagemPrincipalExpandida">
+                        <img src="#" alt="Thumbnail2" onclick="alteraImagemPrincipalExpandida">
+                        <img src="#" alt="Thumbnail3" onclick="alteraImagemPrincipalExpandida">
+                    </nav>
+                </div>
+            </div>
+            <!-- Detalhes do produto -->
+            <div class="detalhesProduto">
+                <h2>Nome do Produto</h2>
+                <p>Breve descrição</p>
+                <div class="preco">
+                    <span class="precoAntigo">R$199,90</span>
+                    <span class="precoNovo">R$149,90</span>
+                    <span class="precoCredito">R$169,90</span>
+                </div>
+                <!-- inputs interativos -->
+                <label for="action" class="actions">
+                    <select id="coresProduto" name="coresProduto">
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select><br>
+                    <input type="submit" name="efetuarCompra" id="efetuarCompra">
+                    <input type="submit" name="adicionaAoCarrinho" id="adicionaAoCarrinho">
+                </label>
+            </div>
+            <!-- Especificações e detalhes -->
+            <section class="especificacoes">
+                <details onclick="expandeDescricao">
+                    <summary>Descrição</summary>
+                    <img src="" alt="" class="setaExpansao">
+                    <div class="descricaoProduto">
+                        <p>Detalhes da descrição do produto...</p>
+                    </div>
+                </details>
+                <details onclick="expandeEspecificacao">
+                    <summary>Especificações Técnicas</summary>
+                    <img src="" alt="" class="setaExpansao">
+                    <div class="especificacaoProduto">
+                        <p>Informações técnicas...</p>
+                    </div>
+                </details>
+                <details onclick="expandeAvaliacao">
+                    <summary>Avaliações</summary>
+                    <img src="" alt="" class="setaExpansao">
+                    <div class="avaliacoesProduto">
+                        <p>Comentários de clientes...</p>
+                    </div>
+                </details>
+                <details onclick="expandePerguntas">
+                    <summary>Perguntas Frequentes</summary>
+                    <img src="" alt="" class="setaExpansao">
+                    <div class="perguntasProduto">
+                        <p>Respostas para perguntas comuns...</p>
+                    </div>
+                </details>
+            </section>
+
+            <!-- Produtos relacionados -->
+            <section class="produtosRelacionados">
+                <h3>Produtos Relacionados</h3>
+                <div class="gradeProdutos">
+                    <!-- Produtos a serem puxados do banco -->
+                    <article class="itemProduto"></article>
+
+                </div>
+            </section>
+    </main>
+    <footer>
+        <div class="newsletter">
+            <div class="formulario-newsletter"></div>
+        </div>
+        <div class="footerInfos">
+            <div class="footerBox">
+                <h3>Informativo</h3>
+                <ul>
+                    <li>Sobre</li>
+                    <li>Políticas</li>
+                    <li>Termos</li>
+                </ul>
+            </div>
+            <div class="footerBox">
+                <h3>Localização</h3>
+                <p>Rua Paraguai, 1634 - Medianeira - PR</p>
+            </div>
+            <div class="footerBox">
+                <h3>Contato</h3>
+                <p>aneliseweyand@gmail.com</p>
+                <p>(45) 99933-6621</p>
+            </div>
+            <div class="footerBoxRedesSociais">
+                <div class="icon"></div>
+                <div class="icon"></div>
+                <div class="icon"></div>
+            </div>
+        </div>
+    </footer>
     <script src="produto.js">
 
     </script>
 </body>
+
 </html>

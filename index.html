@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,21 +8,27 @@
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="itemProduto.css">
     <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="cores.css">
 </head>
+
 <body>
     <header>
-        <nav>
+        <nav class="navbar">
             <div class="logo"></div>
-            <div class="menu">
-                <div class="cortinas">
-                    <div class="cortinasPorAmbiente"></div>
-                    <div class="cortinasPorVarao"></div>
-                    <div class="cortinasPorLuz"></div>
-                </div>
-                <div class="cortinasSobMedida"></div>
-                <div class="contato"></div>
+            <ul class="nav-links">
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Cortinas</a></li>
+                <li><a href="#">Sob Medida</a></li>
+                <li><a href="#">Ambientes</a></li>
+            </ul>
+            <div class="pesquisar">
+                <form action="/buscar" method="get">
+                    <input type="search" name="buscar" placeholder="Pesquisar...">
+                    <button type="submit">Buscar</button>
+                </form>
             </div>
-            <div class="usuario">
+            <div class="user-actions">
                 <div class="login"></div>
                 <div class="cadastro"></div>
             </div>
@@ -32,40 +39,65 @@
     </section>
     <main>
         <section class="tiposCortinas">
-
+            <!-- Ícones/tipos de cortinas com avatar e nome -->
         </section>
-        <section class="descricoesDaLoja">
 
-        </section>
         <section class="produtosPrincipais">
-
+            <!-- Cards com imagem, título, descrição e botão -->
         </section>
+
+        <section class="descricoesDaLoja">
+            <!-- Blocos de texto com informações sobre serviços ou produtos -->
+        </section>
+
         <section class="avaliacoes">
-
+            <!-- Avaliações de clientes / depoimentos -->
         </section>
-        <section class="divulgacaoWhatsapp">
 
+        <section class="divulgacaoWhatsapp">
+            <!-- Chamada para ação com botão e imagem de celular -->
+        </section>
+
+        <section class="produtosMaisVisualizados">
+            <!-- Cards com imagem, título, descrição e botão -->
+        </section>
+
+        <section class="geolocalizacao">
+            <!-- ilustração visual e animada (aproximação) da localização -->
         </section>
     </main>
     <footer>
-        <div class="footerBoxInfo">
-            <div>Infos</div>
-          </div>
-          <div class="footerBox">
-            <div>Localização</div>
-          </div>
-          <div class="footerBox">
-            <div>Contato</div>
-          </div>
-          <div class="footerBox social">
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
+        <div class="newsletter">
+            <div class="formulario-newsletter"></div>
+        </div>
+        <div class="footerInfos">
+            <div class="footerBox">
+                <h3>Informativo</h3>
+                <ul>
+                    <li>Sobre</li>
+                    <li>Políticas</li>
+                    <li>Termos</li>
+                </ul>
+            </div>
+            <div class="footerBox">
+                <h3>Localização</h3>
+                <p>Rua Paraguai, 1634 - Medianeira - PR</p>
+            </div>
+            <div class="footerBox">
+                <h3>Contato</h3>
+                <p>aneliseweyand@gmail.com</p>
+                <p>(45) 99933-6621</p>
+            </div>
+            <div class="footerBox redesSociais">
+                <div class="icon"></div>
+                <div class="icon"></div>
+                <div class="icon"></div>
+            </div>
+        </div>
     </footer>
-
     <script src="main.js">
 
     </script>
 </body>
+
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +8,120 @@
     <link rel="stylesheet" href="search.css">
     <link rel="stylesheet" href="itemProduto.css">
     <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="cores.css">
 </head>
+
 <body>
-    
+    <header>
+        <nav class="navbar">
+            <div class="logo"></div>
+            <ul class="nav-links">
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Cortinas</a></li>
+                <li><a href="#">Sob Medida</a></li>
+                <li><a href="#">Ambientes</a></li>
+            </ul>
+            <div class="pesquisar">
+                <form action="/buscar" method="get">
+                    <input type="search" name="buscar" placeholder="Pesquisar...">
+                    <button type="submit">Buscar</button>
+                </form>
+            </div>
+            <div class="user-actions">
+                <div class="login"></div>
+                <div class="cadastro"></div>
+            </div>
+        </nav>
+    </header>
+    <main>
+
+        <aside class="filtroLateral">
+
+            <!-- Todas as informações de filtro devem ser puxadas do banco, estrutura inicial apenas para ilustração -->
+
+            <section class="categorias">
+                <form>
+                    <label>
+                        <input type="checkbox" name="quarto" value="blackout">
+                    </label><br>
+                </form>
+            </section>
+
+            <section class="cores">
+                <form>
+                    <label>
+                        <input type="checkbox" name="cor" value="bege">
+                    </label><br>
+                </form>
+            </section>
+
+            <section class="tamanhos">
+                <form>
+                    <label>
+                        <input type="checkbox" name="1m80" value="1m80">
+                    </label><br>
+                </form>
+            </section>
+
+            <section class="tecidos">
+                <form>
+                    <label>
+                        <input type="checkbox" name="tecido" value="linho">
+                    </label><br>
+                </form>
+            </section>
+        </aside>
+
+        <section class="produtos">
+            <div class="barraSuperior">
+                <input type="text" placeholder="Buscar...">
+                <button>Filtrar</button>
+            </div>
+            <div class="gradeProdutos">
+                <!-- Produtos a serem puxados do banco -->
+                <article class="itemProduto"></article>
+
+            </div>
+                <div class="paginacao">
+                    <span class="pagina ativa"></span>
+                    <span class="pagina"></span>
+                    <span class="pagina"></span>
+                </div>
+        </section>
+    </main>
+    <footer>
+        <div class="newsletter">
+            <div class="formulario-newsletter"></div>
+        </div>
+        <div class="footerInfos">
+            <div class="footerBox">
+                <h3>Informativo</h3>
+                <ul>
+                    <li>Sobre</li>
+                    <li>Políticas</li>
+                    <li>Termos</li>
+                </ul>
+            </div>
+            <div class="footerBox">
+                <h3>Localização</h3>
+                <p>Rua Paraguai, 1634 - Medianeira - PR</p>
+            </div>
+            <div class="footerBox">
+                <h3>Contato</h3>
+                <p>aneliseweyand@gmail.com</p>
+                <p>(45) 99933-6621</p>
+            </div>
+            <div class="footerBoxRedesSociais">
+                <div class="icon"></div>
+                <div class="icon"></div>
+                <div class="icon"></div>
+            </div>
+        </div>
+    </footer>
     <script src="search.js">
 
     </script>
 </body>
+
 </html>
