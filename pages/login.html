@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +9,72 @@
     <link rel="stylesheet" href="cadastro.css">
     <link rel="stylesheet" href="cores.css">
 </head>
+
 <body>
-    
+    <main>
+        <!-- Abas para alternar entre login e cadastro -->
+        <div class="alternaFormulario">
+            <button id="login-tab">Login</button>
+            <button id="cadastro-tab">Cadastro</button>
+        </div>
+
+        <!-- Área dos formulários -->
+        <div class="containerFormulario">
+
+            <!-- Formulário de Login -->
+            <div id="formularioLogin" class="form">
+                <div class="logo">
+                    <img src="" alt="">
+                </div>
+                <h2>Entrar</h2>
+                <form>
+                    <div class="agrupaFormulario">
+                        <label for="loginEmail">E-mail</label>
+                        <input type="email" id="loginEmail" name="loginEmail">
+                    </div>
+                    <div class="agrupaFormulario">
+                        <label for="login-senha">Senha</label>
+                        <input type="password" id="loginSenha" name="loginSenha">
+                    </div>
+                    <button type="submit">Entrar</button>
+                </form>
+            </div>
+
+            <!-- Formulário de Cadastro -->
+            <div id="formularioCadastro" class="form">
+                <div class="logo">
+                    <img src="" alt="">
+                </div>
+                <h2>Criar Conta</h2>
+                <form>
+                    <div class="agrupaFormulario">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" name="nome">
+                    </div>
+                    <div class="agrupaFormulario">
+                        <label for="sobrenome">Telefone</label>
+                        <input type="text" id="telefone" name="telefone">
+                    </div>
+                    <div class="agrupaFormulario">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+                    <div class="agrupaFormulario">
+                        <label for="senha">Senha</label>
+                        <input type="password" id="senha" name="senha">
+                    </div>
+                    <div class="agrupaFormulario">
+                        <label for="confirma-senha">Confirmar Senha</label>
+                        <input type="password" id="confirmaSenha" name="confirmaSenha">
+                    </div>
+                    <button type="submit">Cadastrar</button>
+                </form>
+            </div>
+        </div>
+    </main>
     <script src="login.js">
 
     </script>
 </body>
+
 </html>
