@@ -1,0 +1,138 @@
+@import url(./cores.css);
+
+header {
+    background-color: var(--cor-primaria-002);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 70px;
+}
+
+
+nav.barraDeNavegacao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    width: 100%;
+    max-width: 2000px;
+    height: 50%;
+    margin: 0 auto;
+    /* centraliza o container no header */
+    padding: 0 20px;
+    /* espaço interno nas laterais */
+    box-sizing: border-box;
+}
+
+.logoELinks,
+.pesquisarEUsuario {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    background-color: var(--cor-primaria-001);
+    position: relative;
+    left: 0px;
+    width: 150px;
+    height: 50px;
+    margin: none;
+    padding: none;
+    border: 1px solid black;
+}
+
+.navLinks {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    list-style: none;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    left: 0px;
+    margin: 1px;
+}
+
+.navLinks li {
+    margin-left: 60px;
+}
+
+.cortinasExpandir {
+    cursor: pointer;
+}
+
+.cortinasExpandida {
+    background-color: var(--cor-primaria-003);
+    border: 1px solid black;
+    z-index: 1;
+    position: fixed;
+    left: 0px;
+    top: 70px;
+    width: 100vw;
+    max-height: 0px;
+
+    overflow: hidden;
+    visibility: hidden;
+    transition: max-height 0.5s ease;
+    pointer-events: none;
+}
+
+.cortinasExpandida.ativo {
+    visibility: visible;
+    max-height: 200px;
+    transform: height(200px);
+    visibility: visible;
+    pointer-events: auto;
+    cursor: default;
+}
+
+.fecharCortinas {
+    cursor: pointer;
+}
+
+.pesquisar {
+    margin-right: 30px;
+    width: 200px;
+    display: flex;
+    height: 30px;
+    flex-direction: row;
+}
+
+.pesquisar form {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.inputPesquisar {
+    width: 170px;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.botaoPesquisar {
+    background-color: var(--cor-primaria-001);
+    position: relative;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.usuario {
+    background-color: var(--cor-primaria-001);
+    position: relative;
+    right: 0px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+}

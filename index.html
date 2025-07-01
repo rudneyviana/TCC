@@ -5,32 +5,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ane Cortinas</title>
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/itemProduto.css">
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/cores.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/itemProduto.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/cores.css">
 </head>
 
 <body>
     <header>
         <nav class="barraDeNavegacao">
-            <div class="logo"></div>
-            <ul class="navLinks">
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Cortinas</a></li>
-                <li><a href="#">Sob Medida</a></li>
-                <li><a href="#">Ambientes</a></li>
-            </ul>
-            <div class="pesquisar">
-                <form action="/buscar" method="get">
-                    <input type="search" name="buscar" placeholder="Pesquisar...">
-                    <button type="submit">Buscar</button>
-                </form>
+            <div class="logoELinks">
+                <div class="logo"></div>
+                <ul class="navLinks">
+                    <li id="cortinasExpandir" class="cortinasExpandir">
+                        Cortinas
+                        <div id="cortinasBarra" class="cortinasExpandida">
+                            <div class="conteudoCortinas">
+                                <button id="fecharCortinas"></button>
+                                <ul>
+                                    <li>asdf</li> <br>
+                                    <li>asdfa</li> <br>
+                                    <li>dsfg</li> <br>
+                                    <li>sdfg</li>
+                                    <li>sdfg</li>
+                                    <li>sdfg</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>Atendimento</li>
+                    <li>Serviços</li>
+                    <li>Carrinho</li>
+                </ul>
             </div>
-            <div class="usuario">
-                <div class="login"></div>
-                <div class="cadastro"></div>
+            <div class="pesquisarEUsuario">
+                <div class="pesquisar">
+                    <form action="/buscar" method="get">
+                        <input type="search" name="buscar" placeholder="Pesquisar..." class="inputPesquisar">
+                        <button type="submit" class="botaoPesquisar"></button>
+                    </form>
+                </div>
+                <div class="usuario"></div>
             </div>
         </nav>
     </header>
@@ -95,7 +111,7 @@
             </div>
         </div>
     </footer>
-    <script src="main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
