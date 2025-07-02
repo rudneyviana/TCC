@@ -78,7 +78,7 @@ nav.barraDeNavegacao {
     width: 100vw;
     max-height: 0px;
     align-items: center;
-    
+
 
     overflow: hidden;
     visibility: hidden;
@@ -101,6 +101,7 @@ nav.barraDeNavegacao {
     top: 10px;
     cursor: pointer;
 }
+
 .submenuCortinas {
     height: 50px;
     width: 100vw;
@@ -111,36 +112,80 @@ nav.barraDeNavegacao {
     list-style: none;
     margin: 0;
     padding: 0;
-  }
-  
-  .li-wrapper {
+}
+
+.li-wrapper {
     position: relative;
-  }
-  
-  .submenu {
+}
+
+.submenu {
     position: fixed;
     top: 122px;
-    width: 400px;
+    max-width: 600px;
+    max-height: 800px;
     background: #c37070;
     padding: 10px;
     max-height: 100px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     z-index: 11;
-  
+
     opacity: 0;
     visibility: hidden;
     transform: translateX(-10px);
     transition: opacity 0.3s ease, transform 0.3s ease;
     pointer-events: none;
-  }
-  
-  .li-wrapper:hover .submenu {
+}
+
+.li-wrapper:hover .submenu {
     opacity: 1;
     visibility: visible;
     transform: translateX(0);
     pointer-events: auto;
-  }
-  
+}
+
+.carrosselSubmenu {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+}
+
+.carrosselContent {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 300%;
+    /* <- ESSENCIAL para funcionar */
+    height: 100%;
+}
+
+.carrosselItem {
+    min-width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    background-color: aliceblue;
+}
+
+.carrosselButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.carrosselButton.left {
+    left: 0;
+}
+
+.carrosselButton.right {
+    right: 0;
+}
+
 .pesquisar {
     margin-right: 30px;
     width: 200px;
