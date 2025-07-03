@@ -71,6 +71,12 @@ nav.barraDeNavegacao {
 
 .navLinks li {
     margin-left: 60px;
+    color: #ffffff  ;
+    transform: color 0.3s ease 0.2s ;
+}
+
+header.scrolled .navLinks li {
+    color: #1b1a1a  ;
 }
 
 .cortinasExpandir {
@@ -107,7 +113,7 @@ nav.barraDeNavegacao {
 }
 
 .cortinasExpandida.ativo {
-    max-height: 50px;
+    max-height: 62px;
     visibility: visible;
     pointer-events: auto;
     cursor: default;
@@ -128,8 +134,29 @@ nav.barraDeNavegacao {
 
 .conteudoCortinas {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.cortinasExpandida.ativo .hrHeader {
+    visibility: visible;
+    width: 100vw;  
+    position: absolute;
+    bottom: 0;    
+    left: 50%;  
+    transform: translateX(-50%);  
+    transition: width 0.5s ease-out 0.3s, visibility 1ms ease;  
+}
+
+.cortinasExpandida.scrolled .hrHeader{
+    display: none;
+}
+
+.hrHeader {
+    color: aliceblue;
+    transition: width 10s ease 01s;
+    width: 0vw;
 }
 
 .submenuCortinas {
@@ -290,6 +317,9 @@ header.expandida .submenu {
     cursor: text;
     color: #000000;
 }
+header.scrolled .inputPesquisar::placeholder {
+    color: #000000;
+}
 
 .inputPesquisar.visivel {
     width: 180px;
@@ -322,7 +352,7 @@ header.expandida .submenu {
 
 /* Animação do cursor */
 .inputPesquisar::placeholder {
-    color: #000000;
+    color: #fffbfb;
 }
 
 

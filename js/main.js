@@ -1,4 +1,4 @@
-// Função para expandir as cortinas com animação ao fechar
+// Função para expandir cortinas com animação ao fechar
 
 document.addEventListener('DOMContentLoaded', () => {
   const trigger = document.getElementById('cortinasExpandir');
@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  // Abrir ou fechar ao clicar no trigger
   trigger.addEventListener('click', (e) => {
     e.stopPropagation();
     if (barra.classList.contains('ativo')) {
@@ -23,12 +22,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Prevenir o fechamento ao clicar dentro da barra
   barra.addEventListener('click', (e) => {
     e.stopPropagation();
   });
 
-  // Botão de fechar interno
   botaoFechar.addEventListener('click', (e) => {
     e.stopPropagation();
     fecharComAnimacao();
