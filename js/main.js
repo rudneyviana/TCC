@@ -140,3 +140,32 @@ window.addEventListener('scroll', () => {
   lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
 });
 
+// Função de expanção da lupa
+document.addEventListener('DOMContentLoaded', () => {
+  const input = document.querySelector('.inputPesquisar');
+  const icone = document.querySelector('.iconeBuscar');
+  const form = document.querySelector('.pesquisar');
+
+  const esconderInput = (e) => {
+    if (!form.contains(e.target)) {
+      input.classList.remove('visivel');
+    }
+  };
+
+  icone.addEventListener('click', (e) => {
+    e.preventDefault();
+    input.classList.add('visivel');
+    input.focus();
+  });
+
+  input.addEventListener('input', () => {
+  if (input.value.trim()) {
+    input.classList.add('preenchido');
+  } else {
+    input.classList.remove('preenchido');
+  }
+});
+
+
+  document.addEventListener('click', esconderInput);
+});
