@@ -124,7 +124,7 @@ window.addEventListener('scroll', () => {
   if (scrollTop > 10) {
     header.classList.add('scrolled');
     cortinasBarra.classList.add('scrolled');
-  }else {
+  } else {
     header.classList.remove('scrolled');
     cortinasBarra.classList.remove('scrolled');
   }
@@ -159,12 +159,12 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   input.addEventListener('input', () => {
-  if (input.value.trim()) {
-    input.classList.add('preenchido');
-  } else {
-    input.classList.remove('preenchido');
-  }
-});
+    if (input.value.trim()) {
+      input.classList.add('preenchido');
+    } else {
+      input.classList.remove('preenchido');
+    }
+  });
 
 
   document.addEventListener('click', esconderInput);
