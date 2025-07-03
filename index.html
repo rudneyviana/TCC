@@ -2,14 +2,14 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ane Cortinas</title>
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/itemProduto.css">
-    <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/footer.css">
-    <link rel="stylesheet" href="./css/cores.css">
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/itemProduto.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/cores.css" />
 </head>
 
 <body>
@@ -27,12 +27,12 @@
                                     <li class="li-wrapper">
                                         <span>Cortinas por Ambiente</span>
                                         <div class="submenu ambienteExpandida">
-
                                             <div class="carrosselSubmenu" id="carrosselSubmenu1">
                                                 <button class="carrosselButton left">◀</button>
                                                 <div class="carrosselContent">
                                                     <div class="carrosselItem">Slide 1</div>
                                                     <div class="carrosselItem">Slide 2</div>
+                                                    <!-- Dados a serem inseridos do banco -->
                                                     <div class="carrosselItem">Slide 3</div>
                                                 </div>
                                                 <button class="carrosselButton right">▶</button>
@@ -85,15 +85,21 @@
                             </div>
                         </div>
                     </li>
-                    <li>Atendimento</li>
-                    <li>Serviços</li>
+                    <li>
+                        Atendimento
+                        <div class="adendimentoExpandida"></div>
+                    </li>
+                    <li>
+                        Serviços
+                        <div class="servicosExpandida"></div>
+                    </li>
                     <li>Carrinho</li>
                 </ul>
             </div>
             <div class="pesquisarEUsuario">
                 <div class="pesquisar">
                     <form action="/buscar" method="get">
-                        <input type="search" name="buscar" placeholder="Pesquisar..." class="inputPesquisar">
+                        <input type="search" name="buscar" placeholder="Pesquisar..." class="inputPesquisar" />
                         <button type="submit" class="botaoPesquisar"></button>
                     </form>
                 </div>
@@ -101,9 +107,7 @@
             </div>
         </nav>
     </header>
-    <section class="imgPrincipal">
-
-    </section>
+    <section class="imgPrincipal"></section>
     <main>
         <section class="tiposCortinas">
             <!-- Ícones/tipos de cortinas com avatar e nome -->
@@ -134,33 +138,40 @@
         </section>
     </main>
     <footer>
-        <div class="imagemLogo">
-            <img src="" alt="">
+        <div class="footerContent">
+            <div class="footerPrincipal">
+                <div class="imagemLogo">
+                    <img src="./images/Screenshot_1.png" alt="" />
+                </div>
+                <div class="footerInfos">
+                    <div class="footerBox">
+                        <h3>Informativo</h3>
+                        <ul>
+                            <li>Sobre</li>
+                            <li>Políticas</li>
+                            <li>Termos</li>
+                        </ul>
+                    </div>
+                    <div class="footerBox">
+                        <h3>Localização</h3>
+                        <p>Rua Paraguai, 1634 - Medianeira - PR</p>
+                    </div>
+                    <div class="footerBox">
+                        <h3>Contato</h3>
+                        <p>aneliseweyand@gmail.com</p>
+                        <p>(45) 99933-6621</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footerIcons">
+                <div class="footerBox redesSociais">
+                    <div class="icon"></div>
+                    <div class="icon"></div>
+                    <div class="icon"></div>
+                </div>
+            </div>
         </div>
-        <div class="footerInfos">
-            <div class="footerBox">
-                <h3>Informativo</h3>
-                <ul>
-                    <li>Sobre</li>
-                    <li>Políticas</li>
-                    <li>Termos</li>
-                </ul>
-            </div>
-            <div class="footerBox">
-                <h3>Localização</h3>
-                <p>Rua Paraguai, 1634 - Medianeira - PR</p>
-            </div>
-            <div class="footerBox">
-                <h3>Contato</h3>
-                <p>aneliseweyand@gmail.com</p>
-                <p>(45) 99933-6621</p>
-            </div>
-            <div class="footerBox redesSociais">
-                <div class="icon"></div>
-                <div class="icon"></div>
-                <div class="icon"></div>
-            </div>
-        </div>
+
     </footer>
     <script src="./js/main.js"></script>
 </body>
