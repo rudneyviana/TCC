@@ -1,7 +1,7 @@
 @import url(./cores.css);
 
 header {
-    background-color: var(--cor-primaria-002);
+    background-color: transparent;
     z-index: 10;
     display: flex;
     justify-content: center;
@@ -11,8 +11,16 @@ header {
     left: 0;
     width: 100vw;
     height: 70px;
+    transition: background-color 0.3s ease, height 0.3s ease;
+}
+header.scrolled {
+  background-color: var(--cor-primaria-002);
 }
 
+/* Expansão da header ao subir */
+header.expandida {
+  height: 80px; /* aumenta 10px */
+}
 
 nav.barraDeNavegacao {
     display: flex;
@@ -67,30 +75,43 @@ nav.barraDeNavegacao {
 }
 
 .cortinasExpandida {
-    background-color: var(--cor-primaria-003);
-    border: 1px solid black;
-    z-index: 10;
-    position: fixed;
-    left: 0px;
-    top: 70px;
-    width: 100vw;
-    max-height: 0px;
-    align-items: center;
+  background-color: transparent;
+  z-index: 10;
+  position: fixed;
+  left: 0px;
+  top: 70px;
+  width: 100vw;
+  max-height: 0px;
+  align-items: center;
+  overflow: hidden;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    max-height 0.5s ease,
+    top 0.3s ease,
+    background-color 0.3s ease,
+    visibility 0.5s ease;
+}
 
+.cortinasExpandida.acompanhar-expansao {
+  top: 80px;
+}
 
-    overflow: hidden;
-    visibility: hidden;
-    transition: max-height 0.5s ease;
-    pointer-events: none;
+.cortinasExpandida.scrolled {
+  background-color: var(--cor-primaria-003);
 }
 
 .cortinasExpandida.ativo {
-    visibility: visible;
-    max-height: 50px;
-    transform: height(200px);
-    visibility: visible;
-    pointer-events: auto;
-    cursor: default;
+  max-height: 50px;
+  visibility: visible;
+  pointer-events: auto;
+  cursor: default;
+}
+
+.cortinasExpandida.fechar {
+  max-height: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .fecharCortinas {

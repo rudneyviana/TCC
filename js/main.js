@@ -1,14 +1,26 @@
+// Função para expandir as cortinas com animação ao fechar
 
-// Função para expandir as cortinas
 document.addEventListener('DOMContentLoaded', () => {
   const trigger = document.getElementById('cortinasExpandir');
   const barra = document.getElementById('cortinasBarra');
   const botaoFechar = document.getElementById('fecharCortinas');
 
+  const fecharComAnimacao = () => {
+    if (barra.classList.contains('ativo')) {
+      barra.classList.remove('ativo');
+      barra.classList.add('fechar');
+      setTimeout(() => barra.classList.remove('fechar'), 500); // tempo igual ao transition
+    }
+  };
+
   // Abrir ou fechar ao clicar no trigger
   trigger.addEventListener('click', (e) => {
-    e.stopPropagation(); // Impede que o clique vá para o document
-    barra.classList.toggle('ativo');
+    e.stopPropagation();
+    if (barra.classList.contains('ativo')) {
+      fecharComAnimacao();
+    } else {
+      barra.classList.add('ativo');
+    }
   });
 
   // Prevenir o fechamento ao clicar dentro da barra
@@ -19,12 +31,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // Botão de fechar interno
   botaoFechar.addEventListener('click', (e) => {
     e.stopPropagation();
-    barra.classList.remove('ativo');
+    fecharComAnimacao();
   });
 
   // Fechar ao clicar fora
   document.addEventListener('click', () => {
-    barra.classList.remove('ativo');
+    fecharComAnimacao();
   });
 });
 
@@ -84,6 +96,7 @@ function criarCarrossel(id) {
 
   start();
 }
+
 // Ativa carrossel apenas ao hover em .li-wrapper
 const liWrappers = document.querySelectorAll('.li-wrapper');
 liWrappers.forEach((wrapper) => {
@@ -97,4 +110,32 @@ liWrappers.forEach((wrapper) => {
       }
     });
   }
+});
+
+// Função para mudar cor de fundo da header e expandi-la ao scroll para cima
+let lastScrollTop = 0;
+const header = document.querySelector('header');
+const cortinasBarra = document.getElementById('cortinasBarra');
+
+window.addEventListener('scroll', () => {
+  const scrollTop = window.scrollY || document.documentElement.scrollTop;
+  const barraAtiva = cortinasBarra.classList.contains('ativo');
+
+  if (scrollTop > 10) {
+    header.classList.add('scrolled');
+    cortinasBarra.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+    cortinasBarra.classList.remove('scrolled');
+  }
+
+  if (scrollTop < lastScrollTop) {
+    header.classList.add('expandida');
+    cortinasBarra.classList.add('acompanhar-expansao');
+  } else {
+    header.classList.remove('expandida');
+    cortinasBarra.classList.remove('acompanhar-expansao');
+  }
+
+  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
 });

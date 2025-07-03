@@ -1,0 +1,15 @@
+@import url(./cores.css);
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+main{
+    height: 100vh;
+}
+.imgPrincipal{
+    position: relative;
+    width: 100%;
+    height: 30%;
+    background-color: rgb(119, 150, 177);
+}
