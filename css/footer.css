@@ -14,7 +14,7 @@ footer {
 }
 .footerContent{
     flex-direction: column;
-    width: 1440px;
+    max-width: 1440px;
     height: auto;
 }
 .footerPrincipal{

@@ -124,7 +124,7 @@ window.addEventListener('scroll', () => {
   if (scrollTop > 10) {
     header.classList.add('scrolled');
     cortinasBarra.classList.add('scrolled');
-  } else {
+  }else {
     header.classList.remove('scrolled');
     cortinasBarra.classList.remove('scrolled');
   }
@@ -139,3 +139,4 @@ window.addEventListener('scroll', () => {
 
   lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
 });
+
