@@ -3,7 +3,6 @@
 /* ------------------------------ HEADER ------------------------------ */
 
 header {
-    background-color: transparent;
     z-index: 10;
     display: flex;
     justify-content: center;
@@ -20,22 +19,54 @@ li {
     list-style: none;
 }
 
-header.scrolled {
-    background-color: var(--cor-primaria-002);
-}
-
 header.expandida {
     height: 80px;
 }
 
+.sobreposicaoNav {
+    position: fixed;
+    z-index: 0;
+    background-color: var(--cor-primaria-003);
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 0;
+    transition: height 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+header.scrolled .sobreposicaoNav {
+    height: 70px;
+}
+
+header.expandida.scrolled .sobreposicaoNav {
+    height: 80px;
+}
+
+header.scrolled:has(.cortinasExpandida.ativo) .sobreposicaoNav {
+    height: 128px;
+}
+
+header.scrolled:has(.cortinasExpandida.ativo.acompanhar-expansao) .sobreposicaoNav {
+    height: 140px;
+}
+
+header .cortinasExpandida.fechar~.sobreposicaoNav {
+    height: 70px;
+}
+
+
+/* ---------------------------- NAVEGAÇÃO ---------------------------- */
+
 nav.barraDeNavegacao {
     display: flex;
+    z-index: 10;
     justify-content: space-between;
     align-items: center;
     position: relative;
     width: 100%;
     max-width: 1440px;
-    height: 50%;
+    height: 100%;
     margin: 0 auto;
     padding: 0 20px;
     box-sizing: border-box;
@@ -57,8 +88,6 @@ nav.barraDeNavegacao {
     border: 1px solid black;
 }
 
-/* ---------------------------- NAVEGAÇÃO ---------------------------- */
-
 .navLinks {
     display: flex;
     position: relative;
@@ -71,17 +100,18 @@ nav.barraDeNavegacao {
 
 .navLinks li {
     margin-left: 60px;
-    color: #ffffff  ;
-    transform: color 0.3s ease 0.2s ;
+    color: #ffffff;
+    transform: color 0.3s ease 0.2s;
 }
 
 header.scrolled .navLinks li {
-    color: #1b1a1a  ;
+    color: #1b1a1a;
 }
 
 .cortinasExpandir {
     cursor: pointer;
 }
+
 
 /* -------------------------- MENU EXPANDIDO -------------------------- */
 
@@ -106,10 +136,6 @@ header.scrolled .navLinks li {
 
 .cortinasExpandida.acompanhar-expansao {
     top: 80px;
-}
-
-.cortinasExpandida.scrolled {
-    background-color: var(--cor-primaria-003);
 }
 
 .cortinasExpandida.ativo {
@@ -141,21 +167,20 @@ header.scrolled .navLinks li {
 
 .cortinasExpandida.ativo .hrHeader {
     visibility: visible;
-    width: 100vw;  
+    width: 100vw;
     position: absolute;
-    bottom: 0;    
-    left: 50%;  
-    transform: translateX(-50%);  
-    transition: width 0.5s ease-out 0.3s, visibility 1ms ease;  
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.5s ease-out 0.3s;
 }
 
-.cortinasExpandida.scrolled .hrHeader{
-    display: none;
+.cortinasExpandida.scrolled .hrHeader {
+    visibility: hidden;
 }
 
 .hrHeader {
     color: aliceblue;
-    transition: width 10s ease 01s;
     width: 0vw;
 }
 
@@ -317,6 +342,7 @@ header.expandida .submenu {
     cursor: text;
     color: #000000;
 }
+
 header.scrolled .inputPesquisar::placeholder {
     color: #000000;
 }
