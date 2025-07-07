@@ -111,7 +111,17 @@ header.scrolled .navLinks li {
 .cortinasExpandir {
     cursor: pointer;
 }
+.btnNav img.rotacionado {
+  transform: rotate(-180deg);
+  transition: transform 0.3s ease;
+}
+.wrapperTexto span img {
+        transition: transform 0.3s ease;
+    }
 
+    .li-wrapper:hover > .wrapperTexto span img {
+        transform: rotate(-180deg);
+    }
 
 /* -------------------------- MENU EXPANDIDO -------------------------- */
 

@@ -4,11 +4,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const trigger = document.getElementById('cortinasExpandir');
   const barra = document.getElementById('cortinasBarra');
   const botaoFechar = document.getElementById('fecharCortinas');
+  const seta = trigger.querySelector('img');
 
   const fecharComAnimacao = () => {
     if (barra.classList.contains('ativo')) {
       barra.classList.remove('ativo');
       barra.classList.add('fechar');
+      seta.classList.remove('rotacionado');
       setTimeout(() => barra.classList.remove('fechar'), 500); // tempo igual ao transition
     }
   };
@@ -19,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
       fecharComAnimacao();
     } else {
       barra.classList.add('ativo');
+      seta.classList.add('rotacionado');
     }
   });
 
@@ -116,7 +119,6 @@ const cortinasBarra = document.getElementById('cortinasBarra');
 
 window.addEventListener('scroll', () => {
   const scrollTop = window.scrollY || document.documentElement.scrollTop;
-  const barraAtiva = cortinasBarra.classList.contains('ativo');
 
   if (scrollTop > 10) {
     header.classList.add('scrolled');
