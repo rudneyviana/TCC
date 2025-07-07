@@ -44,11 +44,13 @@ header.expandida.scrolled .sobreposicaoNav {
 }
 
 header.scrolled:has(.cortinasExpandida.ativo) .sobreposicaoNav {
-    height: 128px;
+    height: 122px;
+    transition: height 0.2s ease-in-out;
 }
 
 header.scrolled:has(.cortinasExpandida.ativo.acompanhar-expansao) .sobreposicaoNav {
-    height: 140px;
+    height: 132px;
+    transition: height 0.2s ease-in-out;
 }
 
 header .cortinasExpandida.fechar~.sobreposicaoNav {
@@ -111,17 +113,19 @@ header.scrolled .navLinks li {
 .cortinasExpandir {
     cursor: pointer;
 }
-.btnNav img.rotacionado {
-  transform: rotate(-180deg);
-  transition: transform 0.3s ease;
-}
-.wrapperTexto span img {
-        transition: transform 0.3s ease;
-    }
 
-    .li-wrapper:hover > .wrapperTexto span img {
-        transform: rotate(-180deg);
-    }
+.btnNav img.rotacionado {
+    transform: rotate(-180deg);
+    transition: transform 0.3s ease;
+}
+
+.wrapperTexto span img {
+    transition: transform 0.3s ease;
+}
+
+.li-wrapper:hover>.wrapperTexto span img {
+    transform: rotate(-180deg);
+}
 
 /* -------------------------- MENU EXPANDIDO -------------------------- */
 
