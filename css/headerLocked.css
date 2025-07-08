@@ -1,0 +1,383 @@
+@import url(./cores.css);
+
+/* ------------------------------ HEADER ------------------------------ */
+
+header {
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background-color: var(--cor-primaria-003);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 70px;
+    transition: background-color 0.3s ease, height 0.3s ease;
+}
+
+li {
+    list-style: none;
+}
+
+header.expandida {
+    height: 80px;
+}
+
+.sobreposicaoNav {
+    position: fixed;
+    z-index: 0;
+    background-color: var(--cor-primaria-003);
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 0;
+    transition: height 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+
+
+
+/* ---------------------------- NAVEGAÇÃO ---------------------------- */
+
+nav.barraDeNavegacao {
+    display: flex;
+    z-index: 10;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    max-width: 1440px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.logoELinks,
+.pesquisarEUsuario {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    background-color: var(--cor-primaria-001);
+    position: relative;
+    left: 0;
+    width: 150px;
+    height: 50px;
+    border: 1px solid black;
+}
+
+.navLinks {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    margin: 1px;
+}
+
+.navLinks li {
+    margin-left: 60px;
+    color: #000000;
+    transform: color 0.3s ease 0.2s;
+}
+
+.cortinasExpandir {
+    cursor: pointer;
+}
+
+.btnNav img.rotacionado {
+    transform: rotate(-180deg);
+    transition: transform 0.3s ease;
+}
+
+.wrapperTexto span img {
+    transition: transform 0.3s ease;
+}
+
+.li-wrapper:hover>.wrapperTexto span img {
+    transform: rotate(-180deg);
+}
+
+/* -------------------------- MENU EXPANDIDO -------------------------- */
+
+.cortinasExpandida {
+    background-color: var(--cor-primaria-003);
+    z-index: 10;
+    position: fixed;
+    left: 0;
+    top: 70px;
+    width: 100vw;
+    max-height: 0;
+    align-items: center;
+    overflow: hidden;
+    visibility: hidden;
+    pointer-events: none;
+    transition:
+        max-height 0.5s ease,
+        top 0.3s ease,
+        background-color 0.3s ease,
+        visibility 0.5s ease;
+}
+
+.cortinasExpandida.acompanhar-expansao {
+    top: 80px;
+}
+
+.cortinasExpandida.ativo {
+    max-height: 62px;
+    visibility: visible;
+    pointer-events: auto;
+    cursor: default;
+}
+
+.cortinasExpandida.fechar {
+    max-height: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.fecharCortinas {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.conteudoCortinas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.submenuCortinas {
+    height: 50px;
+    max-width: 1440px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.li-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.wrapperTexto {
+    align-content: center;
+    height: 32px;
+    border-color: transparent;
+    border-radius: 8px;
+    text-shadow: none;
+    transition:
+        background-color 0.3s ease,
+        border-bottom 0.3s ease,
+        border-color 0.3s ease,
+        border-radius 0.1s ease,
+        visibility 0.3s ease;
+}
+
+.wrapperTexto span {
+    margin: 10px;
+    z-index: 11;
+}
+
+.li-wrapper:hover .wrapperTexto {
+    background-color: #c37070;
+    border-bottom: 19px solid #c37070;
+    border-radius: 8px 8px 0 0;
+}
+
+/* ------------------------------ SUBMENU ------------------------------ */
+
+.submenu {
+    position: fixed;
+    top: 120px;
+    width: 380px;
+    max-height: 1000px;
+    background: #c37070;
+    z-index: 11;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    transition:
+        opacity 0.2s ease 0.3s,
+        top 0.3s ease;
+}
+
+header.expandida .submenu {
+    top: 130px;
+}
+
+.li-wrapper:hover .submenu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.navSubmenu {
+    margin: 10px;
+    max-width: 40%;
+}
+
+/* -------------------------- CARROSSEL SUBMENU -------------------------- */
+
+.carrosselSubmenu {
+    position: relative;
+    margin: 10px;
+    min-width: 50%;
+    height: 200px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+}
+
+.carrosselContent {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carrosselItem {
+    min-width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    background-color: aliceblue;
+}
+
+.carrosselButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.carrosselButton.left {
+    left: 0;
+}
+
+.carrosselButton.right {
+    right: 0;
+}
+
+/* ------------------------------ PESQUISAR ------------------------------ */
+@keyframes blinkBorder {
+
+    0%,
+    100% {
+        border-bottom-color: transparent;
+    }
+
+    25%,
+    75% {
+        border-bottom-color: #ffffff;
+    }
+}
+
+.inputPesquisar {
+    width: 0;
+    opacity: 0;
+    border: none;
+    outline: none;
+    transition: width 0.3s ease, opacity 0.3s ease;
+    background: transparent;
+    border-bottom: 1px solid transparent;
+    padding-left: 28px;
+    position: relative;
+    cursor: text;
+    color: #000000;
+}
+
+.inputPesquisar::placeholder {
+    color: #000000;
+}
+
+.inputPesquisar.visivel {
+    width: 180px;
+    opacity: 1;
+    background: none;
+    animation: blinkBorder 2s infinite;
+}
+
+.inputPesquisar.preenchido {
+    animation: none;
+    border-bottom-color: #ffffff;
+}
+
+.iconeBuscar {
+    position: absolute;
+    left: 0px;
+    top: 40%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.pesquisar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* ------------------------------ USUÁRIO ------------------------------ */
+
+.usuario {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    right: 0;
+}
+
+.usuario>div {
+    position: relative;
+}
+
+.adendimentoExpandida,
+.carrinhoExpandida,
+.perfilExpandida {
+    position: absolute;
+    top: 100%;
+    right: 00px;
+
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    width: 250px;
+    height: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 100;
+}
+
+.atendimento:hover .adendimentoExpandida,
+.carrinho:hover .carrinhoExpandida,
+.perfil:hover .perfilExpandida {
+    opacity: 1;
+    visibility: visible;
+}

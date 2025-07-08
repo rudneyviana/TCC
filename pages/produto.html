@@ -7,7 +7,7 @@
     <title>Específicações do Produto</title>
     <link rel="stylesheet" href="./../css/produto.css">
     <link rel="stylesheet" href="./../css/itemProduto.css">
-    <link rel="stylesheet" href="./../css/header.css">
+    <link rel="stylesheet" href="./../css/headerLocked.css">
     <link rel="stylesheet" href="./../css/footer.css">
     <link rel="stylesheet" href="./../css/cores.css">
 </head>
@@ -15,22 +15,171 @@
 <body>
     <header>
         <nav class="barraDeNavegacao">
-            <div class="logo"></div>
-            <ul class="navLinks">
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Cortinas</a></li>
-                <li><a href="#">Sob Medida</a></li>
-                <li><a href="#">Ambientes</a></li>
-            </ul>
-            <div class="pesquisar">
-                <form action="/buscar" method="get">
-                    <input type="search" name="buscar" placeholder="Pesquisar...">
-                    <button type="submit">Buscar</button>
-                </form>
+            <div class="logoELinks">
+                <div class="logo"></div>
+                <ul class="navLinks">
+                    <li id="cortinasExpandir" class="cortinasExpandir">
+                        <span class="btnNav">Cortinas <img src=".././images/downArrow.svg" alt=""></span>
+                        <div id="cortinasBarra" class="cortinasExpandida">
+                            <div class="sobreposicaoCortinas"></div>
+                            <div class="conteudoCortinas">
+                                <button id="fecharCortinas" class=""></button>
+                                <ul class="submenuCortinas">
+                                    <li class="li-wrapper">
+                                        <div class="wrapperTexto">
+                                            <span>Cortinas por Ambiente <img src=".././images/downArrow.svg" alt=""></span>
+                                        </div>
+                                        <div class="submenu ambienteExpandida">
+                                            <nav class="navSubmenu">
+                                                <ul class="ulSubmenu">
+                                                    <li>tipo1</li>
+                                                    <li>tipo2</li>
+                                                    <li>tipo3</li>
+                                                    <li>tipo5</li>
+                                                    <li>tipo6</li>
+                                                    <li>tipo7</li>
+                                                    <li>tipo8</li>
+                                                </ul>
+                                            </nav>
+                                            <div class="carrosselSubmenu" id="carrosselSubmenu1">
+                                                <button class="carrosselButton left">◀</button>
+                                                <div class="carrosselContent">
+                                                    <div class="carrosselItem">Slide 1</div>
+                                                    <div class="carrosselItem">Slide 2</div>
+                                                    <!-- Dados a serem inseridos do banco -->
+                                                    <div class="carrosselItem">Slide 3</div>
+                                                </div>
+                                                <button class="carrosselButton right">▶</button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="li-wrapper">
+                                        <div class="wrapperTexto">
+                                            <span>Cortinas por Controle de Luz <img src=".././images/downArrow.svg"
+                                                    alt=""></span>
+                                        </div>
+
+
+                                        <div class="submenu luzExpandida">
+                                            <nav class="navSubmenu">
+                                                <ul class="ulSubmenu">
+                                                    <li>tipo1</li>
+                                                    <li>tipo2</li>
+                                                    <li>tipo3</li>
+                                                    <li>tipo5</li>
+                                                    <li>tipo6</li>
+                                                    <li>tipo7</li>
+                                                    <li>tipo8</li>
+                                                </ul>
+                                            </nav>
+                                            <div class="carrosselSubmenu" id="carrosselSubmenu2">
+                                                <button class="carrosselButton left">◀</button>
+                                                <div class="carrosselContent">
+                                                    <div class="carrosselItem">Slide 1</div>
+                                                    <div class="carrosselItem">Slide 2</div>
+                                                    <div class="carrosselItem">Slide 3</div>
+                                                </div>
+                                                <button class="carrosselButton right">▶</button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="li-wrapper">
+                                        <div class="wrapperTexto">
+                                            <span>Cortinas por Tecido <img src=".././images/downArrow.svg" alt=""></span>
+                                        </div>
+
+
+                                        <div class="submenu tecidoExpandida">
+                                            <nav class="navSubmenu">
+                                                <ul class="ulSubmenu">
+                                                    <li>tipo1</li>
+                                                    <li>tipo2</li>
+                                                    <li>tipo3</li>
+                                                    <li>tipo5</li>
+                                                    <li>tipo6</li>
+                                                    <li>tipo7</li>
+                                                    <li>tipo8</li>
+                                                </ul>
+                                            </nav>
+                                            <div class="carrosselSubmenu" id="carrosselSubmenu3">
+                                                <button class="carrosselButton left">◀</button>
+                                                <div class="carrosselContent">
+                                                    <div class="carrosselItem">Slide 1</div>
+                                                    <div class="carrosselItem">Slide 2</div>
+                                                    <div class="carrosselItem">Slide 3</div>
+                                                </div>
+                                                <button class="carrosselButton right">▶</button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="li-wrapper">
+                                        <div class="wrapperTexto">
+                                            <span>Cortinas por Varão <img src=".././images/downArrow.svg" alt=""></span>
+                                        </div>
+
+
+                                        <div class="submenu varaoExpandida">
+                                            <nav class="navSubmenu">
+                                                <ul class="ulSubmenu">
+                                                    <li>tipo1</li>
+                                                    <li>tipo2</li>
+                                                    <li>tipo3</li>
+                                                    <li>tipo5</li>
+                                                    <li>tipo6</li>
+                                                    <li>tipo7</li>
+                                                    <li>tipo8</li>
+                                                </ul>
+                                            </nav>
+                                            <div class="carrosselSubmenu" id="carrosselSubmenu4">
+                                                <button class="carrosselButton left">◀</button>
+                                                <div class="carrosselContent">
+                                                    <div class="carrosselItem">Slide 1</div>
+                                                    <div class="carrosselItem">Slide 2</div>
+                                                    <div class="carrosselItem">Slide 3</div>
+                                                </div>
+                                                <button class="carrosselButton right">▶</button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="btnNav">Serviços</span>
+                        <div class="servicosExpandida"></div>
+                    </li>
+                </ul>
             </div>
-            <div class="usuario">
-                <div class="login"></div>
-                <div class="cadastro"></div>
+            <div class="pesquisarEUsuario">
+                <div class="pesquisar">
+                    <form action="/buscar" method="get">
+                        <input type="search" name="buscar" placeholder="Pesquisar..." class="inputPesquisar" />
+                        <img src=".././images/buscar.svg" alt="Buscar" class="iconeBuscar" />
+                    </form>
+                </div>
+                <div class="usuario">
+                    <div class="atendimento">
+                        <img src=".././images/atendimento.svg" alt="atendimento">
+                        <div class="adendimentoExpandida">
+                            <p>Atendimento</p>
+                        </div>
+                    </div>
+                    <div class="carrinho">
+                        <img src=".././images/carrinho.svg" alt="carrinho">
+                        <div class="carrinhoExpandida">
+                            <p>Seu carrinho está vazio.</p>
+                            <p>Adicione produtos para visualizar aqui.</p>
+                        </div>
+                    </div>
+                    <div class="perfil">
+                        <img src=".././images/perfil.svg" alt="perfil">
+                        <div class="perfilExpandida">
+                            <p>Olá, visitante</p>
+                            <p><a href="#">Entrar</a> ou <a href="#">Cadastrar-se</a></p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </nav>
     </header>
@@ -124,33 +273,40 @@
             </section>
     </main>
     <footer>
-        <div class="imagemLogo">
-            <img src="" alt="">
-        </div>
-        <div class="footerInfos">
-            <div class="footerBox">
-                <h3>Informativo</h3>
-                <ul>
-                    <li>Sobre</li>
-                    <li>Políticas</li>
-                    <li>Termos</li>
-                </ul>
+        <div class="footerContent">
+            <div class="footerPrincipal">
+                <div class="imagemLogo">
+                    <img src="./images/Screenshot_1.png" alt="" />
+                </div>
+                <div class="footerInfos">
+                    <div class="footerBox">
+                        <h3>Informativo</h3>
+                        <ul>
+                            <li>Sobre</li>
+                            <li>Políticas</li>
+                            <li>Termos</li>
+                        </ul>
+                    </div>
+                    <div class="footerBox">
+                        <h3>Localização</h3>
+                        <p>Rua Paraguai, 1634 - Medianeira - PR</p>
+                    </div>
+                    <div class="footerBox">
+                        <h3>Contato</h3>
+                        <p>aneliseweyand@gmail.com</p>
+                        <p>(45) 99933-6621</p>
+                    </div>
+                </div>
             </div>
-            <div class="footerBox">
-                <h3>Localização</h3>
-                <p>Rua Paraguai, 1634 - Medianeira - PR</p>
-            </div>
-            <div class="footerBox">
-                <h3>Contato</h3>
-                <p>aneliseweyand@gmail.com</p>
-                <p>(45) 99933-6621</p>
+            <div class="footerIcons">
+                <div class="footerBox redesSociais">
+                    <div class="icon"></div>
+                    <div class="icon"></div>
+                    <div class="icon"></div>
+                </div>
             </div>
         </div>
-        <div class="footerBoxRedesSociais">
-            <div class="icon"></div>
-            <div class="icon"></div>
-            <div class="icon"></div>
-        </div>
+
     </footer>
     <script src="./../js/main.js"></script>
 </body>
