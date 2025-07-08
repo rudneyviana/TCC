@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./../css/headerLocked.css">
     <link rel="stylesheet" href="./../css/footer.css">
     <link rel="stylesheet" href="./../css/cores.css">
+    <link rel="script" href="../js/produto.js">
 </head>
 
 <body>
@@ -187,79 +188,68 @@
         <!-- Seção do produto -->
         <section class="secaoProduto">
             <div class="imagensProduto">
-                <!-- Miniaturas -->
-                <div class="thumbnails">
-                    <img src="#" alt="Thumbnail1" onclick="alteraImagemPrincipal">
-                    <img src="#" alt="Thumbnail2" onclick="alteraImagemPrincipal">
-                    <img src="#" alt="Thumbnail3" onclick="alteraImagemPrincipal">
-                </div>
-                <!-- Imagem principal -->
-                <div class="imagemPrincipal">
-                    <img src="#" alt="" onclick="expandeImagemPrincipal">
-                </div>
-
-                <div class="imagemPrincipalExpandida">
-                    <button class="botaoDeNavegacaoImagemPrincipal">
-                        < </button>
-                            <img src="#" alt="">
-                            <button class="botaoDeNavegacaoImagemPrincipal"> > </button>
-                            <nav class="ilustraThumbnailsExpandida">
-                                <img src="#" alt="Thumbnail1" onclick="alteraImagemPrincipalExpandida">
-                                <img src="#" alt="Thumbnail2" onclick="alteraImagemPrincipalExpandida">
-                                <img src="#" alt="Thumbnail3" onclick="alteraImagemPrincipalExpandida">
-                            </nav>
-                </div>
-            </div>
-            <!-- Detalhes do produto -->
-            <div class="detalhesProduto">
-                <h2>Nome do Produto</h2>
-                <p>Breve descrição</p>
-                <div class="preco">
-                    <span class="precoAntigo">R$199,90</span>
-                    <span class="precoNovo">R$149,90</span>
-                    <span class="precoCredito">R$169,90</span>
-                </div>
-                <!-- inputs interativos -->
-                <label for="action" class="actions">
-                    <select id="coresProduto" name="coresProduto">
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                    </select><br>
-                    <input type="submit" name="efetuarCompra" id="efetuarCompra">
-                    <input type="submit" name="adicionaAoCarrinho" id="adicionaAoCarrinho">
-                </label>
-            </div>
-            <!-- Especificações e detalhes -->
-            <section class="especificacoes">
-                <details onclick="expandeDescricao">
-                    <summary>Descrição</summary>
-                    <img src="" alt="" class="setaExpansao">
-                    <div class="descricaoProduto">
-                        <p>Detalhes da descrição do produto...</p>
+                <div class="produto-container">
+                    <div class="thumbnail-navegacao">
+                      <button class="navegador" id="btnCima" onclick="scrollThumbnails(-1)">▲</button>
+                      <div class="thumbnails">
+                        <div class="thumb-wrapper" id="thumbWrapper">
+                          <img src="./../images/perfil.svg" alt="Thumb1" onclick="trocarImagem(this)" class="active">
+                          <img src="./../images/buscar.svg" alt="Thumb2" onclick="trocarImagem(this)">
+                          <img src="./../images/perfil.svg" alt="Thumb3" onclick="trocarImagem(this)">
+                          <img src="./../images/perfil.svg" alt="Thumb4" onclick="trocarImagem(this)">
+                          <img src="./../images/perfil.svg" alt="Thumb5" onclick="trocarImagem(this)">
+                          <img src="./../images/perfil.svg" alt="Thumb6" onclick="trocarImagem(this)">
+                          <img src="./../images/buscar.svg" alt="Thumb2" onclick="trocarImagem(this)">
+                          <img src="./../images/buscar.svg" alt="Thumb2" onclick="trocarImagem(this)">
+                        </div>
+                      </div>
+                      <button class="navegador" id="btnBaixo" onclick="scrollThumbnails(1)">▼</button>
                     </div>
-                </details>
-                <details onclick="expandeEspecificacao">
-                    <summary>Especificações Técnicas</summary>
-                    <img src="" alt="" class="setaExpansao">
-                    <div class="especificacaoProduto">
-                        <p>Informações técnicas...</p>
+                
+                    <div class="imagemPrincipal" onmousemove="ampliar(event)" onmouseleave="ocultarZoom()">
+                      <img id="imgPrincipal" src="./../images/perfil.svg" alt="Principal">
+                      <div class="zoom" id="zoom"></div>
                     </div>
-                </details>
-                <details onclick="expandeAvaliacao">
-                    <summary>Avaliações</summary>
-                    <img src="" alt="" class="setaExpansao">
-                    <div class="avaliacoesProduto">
-                        <p>Comentários de clientes...</p>
+                  
+                
+                    <div class="detalhesProduto">
+                      <h2>Nome do Produto</h2>
+                      <p>Breve descrição do produto.</p>
+                      <div class="preco">
+                        <span class="precoAntigo">R$199,90</span>
+                        <span class="precoNovo">R$149,90</span>
+                        <span class="precoCredito">ou R$169,90 no crédito</span>
+                      </div>
+                      <select>
+                        <option>Cor 1</option>
+                        <option>Cor 2</option>
+                        <option>Cor 3</option>
+                      </select>
+                      <br><br>
+                      <button>Comprar agora</button>
+                      <button>Adicionar ao carrinho</button>
                     </div>
-                </details>
-                <details onclick="expandePerguntas">
-                    <summary>Perguntas Frequentes</summary>
-                    <img src="" alt="" class="setaExpansao">
-                    <div class="perguntasProduto">
-                        <p>Respostas para perguntas comuns...</p>
-                    </div>
-                </details>
+                  </div>
+                </div>
+                
+                  <div class="especificacoes">
+                    <details>
+                      <summary>Descrição</summary>
+                      <p>Descrição completa do produto...</p>
+                    </details>
+                    <details>
+                      <summary>Especificações Técnicas</summary>
+                      <p>Dimensões, materiais, instruções, etc.</p>
+                    </details>
+                    <details>
+                      <summary>Avaliações</summary>
+                      <p>Comentários de clientes, estrelas, etc.</p>
+                    </details>
+                    <details>
+                      <summary>Perguntas Frequentes</summary>
+                      <p>Dúvidas comuns respondidas.</p>
+                    </details>
+                  </div>
             </section>
 
             <!-- Produtos relacionados -->
