@@ -20,7 +20,7 @@
                 <div class="logo"></div>
                 <ul class="navLinks">
                     <li id="cortinasExpandir" class="cortinasExpandir">
-                        <span class="btnNav">Cortinas <img src=".././images/downArrow.svg" alt=""></span>
+                        <span class="btnNav">Cortinas <img src="./.././images/downArrow.svg" alt=""></span>
                         <div id="cortinasBarra" class="cortinasExpandida">
                             <div class="sobreposicaoCortinas"></div>
                             <div class="conteudoCortinas">
@@ -28,7 +28,8 @@
                                 <ul class="submenuCortinas">
                                     <li class="li-wrapper">
                                         <div class="wrapperTexto">
-                                            <span>Cortinas por Ambiente <img src=".././images/downArrow.svg" alt=""></span>
+                                            <span>Cortinas por Ambiente <img src="./.././images/downArrow.svg"
+                                                    alt=""></span>
                                         </div>
                                         <div class="submenu ambienteExpandida">
                                             <nav class="navSubmenu">
@@ -56,7 +57,7 @@
                                     </li>
                                     <li class="li-wrapper">
                                         <div class="wrapperTexto">
-                                            <span>Cortinas por Controle de Luz <img src=".././images/downArrow.svg"
+                                            <span>Cortinas por Controle de Luz <img src="./.././images/downArrow.svg"
                                                     alt=""></span>
                                         </div>
 
@@ -86,7 +87,8 @@
                                     </li>
                                     <li class="li-wrapper">
                                         <div class="wrapperTexto">
-                                            <span>Cortinas por Tecido <img src=".././images/downArrow.svg" alt=""></span>
+                                            <span>Cortinas por Tecido <img src="./.././images/downArrow.svg"
+                                                    alt=""></span>
                                         </div>
 
 
@@ -115,7 +117,8 @@
                                     </li>
                                     <li class="li-wrapper">
                                         <div class="wrapperTexto">
-                                            <span>Cortinas por Varão <img src=".././images/downArrow.svg" alt=""></span>
+                                            <span>Cortinas por Varão <img src="./.././images/downArrow.svg"
+                                                    alt=""></span>
                                         </div>
 
 
@@ -189,78 +192,79 @@
         <section class="secaoProduto">
             <div class="imagensProduto">
                 <div class="produto-container">
-                    <div class="thumbnail-navegacao">
-                      <button class="navegador" id="btnCima" onclick="scrollThumbnails(-1)">▲</button>
-                      <div class="thumbnails">
-                        <div class="thumb-wrapper" id="thumbWrapper">
-                          <img src="./../images/perfil.svg" alt="Thumb1" onclick="trocarImagem(this)" class="active">
-                          <img src="./../images/buscar.svg" alt="Thumb2" onclick="trocarImagem(this)">
-                          <img src="./../images/perfil.svg" alt="Thumb3" onclick="trocarImagem(this)">
-                          <img src="./../images/perfil.svg" alt="Thumb4" onclick="trocarImagem(this)">
-                          <img src="./../images/perfil.svg" alt="Thumb5" onclick="trocarImagem(this)">
-                          <img src="./../images/perfil.svg" alt="Thumb6" onclick="trocarImagem(this)">
-                          <img src="./../images/buscar.svg" alt="Thumb2" onclick="trocarImagem(this)">
-                          <img src="./../images/buscar.svg" alt="Thumb2" onclick="trocarImagem(this)">
+                    <div class="thumbnailNavegacao">
+                        <button class="navegador" id="btnCima" onclick="scrollThumbnails(-1)">▲</button>
+
+                        <div class="thumbnails">
+                            <div class="thumbWrapper" id="thumbWrapper">
+                                <img src="./../images/produto1.png" alt="Thumb2" onclick="trocarImagem(this)">
+                                <img src="./../images/produto1Miniatura1.png" alt="Thumb3" onclick="trocarImagem(this)">
+                                <img src="./../images/produto1Miniatura2.png" alt="Thumb4" onclick="trocarImagem(this)">
+                                <img src="./../images/produto1Miniatura3.png" alt="Thumb5" onclick="trocarImagem(this)">
+                                <img src="./../images/produto1Miniatura4.png" alt="Thumb6" onclick="trocarImagem(this)">
+                                <img src="./../images/produto1Miniatura5.png" alt="Thumb2" onclick="trocarImagem(this)">
+                            </div>
                         </div>
-                      </div>
-                      <button class="navegador" id="btnBaixo" onclick="scrollThumbnails(1)">▼</button>
+
+                        <button class="navegador" id="btnBaixo" onclick="scrollThumbnails(1)">▼</button>
                     </div>
-                
+
+
                     <div class="imagemPrincipal" onmousemove="ampliar(event)" onmouseleave="ocultarZoom()">
-                      <img id="imgPrincipal" src="./../images/perfil.svg" alt="Principal">
-                      <div class="zoom" id="zoom"></div>
+                        <img id="imgPrincipal" src="./../images/produto1.png" alt="Principal">
+                        <div class="zoom" id="zoom"></div>
                     </div>
-                  
-                
+
+
                     <div class="detalhesProduto">
-                      <h2>Nome do Produto</h2>
-                      <p>Breve descrição do produto.</p>
-                      <div class="preco">
-                        <span class="precoAntigo">R$199,90</span>
-                        <span class="precoNovo">R$149,90</span>
-                        <span class="precoCredito">ou R$169,90 no crédito</span>
-                      </div>
-                      <select>
-                        <option>Cor 1</option>
-                        <option>Cor 2</option>
-                        <option>Cor 3</option>
-                      </select>
-                      <br><br>
-                      <button>Comprar agora</button>
-                      <button>Adicionar ao carrinho</button>
+                        <h2>Nome do Produto</h2>
+                        <p>Breve descrição do produto.</p>
+                        <div class="preco">
+                            <span class="precoAntigo">R$199,90</span>
+                            <span class="precoNovo">R$149,90</span>
+                            <span class="precoCredito">ou R$169,90 no crédito</span>
+                        </div>
+                        <select>
+                            <option>Cor 1</option>
+                            <option>Cor 2</option>
+                            <option>Cor 3</option>
+                        </select>
+                        <br><br>
+                        <button>Comprar agora</button>
+                        <button>Adicionar ao carrinho</button>
                     </div>
-                  </div>
                 </div>
-                
-                  <div class="especificacoes">
-                    <details>
-                      <summary>Descrição</summary>
-                      <p>Descrição completa do produto...</p>
-                    </details>
-                    <details>
-                      <summary>Especificações Técnicas</summary>
-                      <p>Dimensões, materiais, instruções, etc.</p>
-                    </details>
-                    <details>
-                      <summary>Avaliações</summary>
-                      <p>Comentários de clientes, estrelas, etc.</p>
-                    </details>
-                    <details>
-                      <summary>Perguntas Frequentes</summary>
-                      <p>Dúvidas comuns respondidas.</p>
-                    </details>
-                  </div>
-            </section>
+            </div>
 
-            <!-- Produtos relacionados -->
-            <section class="produtosRelacionados">
-                <h3>Produtos Relacionados</h3>
-                <div class="gradeProdutos">
-                    <!-- Produtos a serem puxados do banco -->
-                    <article class="itemProduto"></article>
+            <div class="especificacoes">
+                <details>
+                    <summary>Descrição</summary>
+                    <p>Descrição completa do produto...</p>
+                </details>
+                <details>
+                    <summary>Especificações Técnicas</summary>
+                    <p>Dimensões, materiais, instruções, etc.</p>
+                </details>
+                <details>
+                    <summary>Avaliações</summary>
+                    <p>Comentários de clientes, estrelas, etc.</p>
+                </details>
+                <details>
+                    <summary>Perguntas Frequentes</summary>
+                    <p>Dúvidas comuns respondidas.</p>
+                </details>
+            </div>
+        </section>
 
-                </div>
-            </section>
+        <!-- Produtos relacionados -->
+        <section class="produtosRelacionados">
+            <h3>Produtos Relacionados</h3>
+            <div class="gradeProdutos">
+                <!-- Produtos a serem puxados do banco -->
+                <article class="itemProduto"></article>
+
+            </div>
+        </section>
     </main>
     <footer>
         <div class="footerContent">
