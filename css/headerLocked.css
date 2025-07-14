@@ -66,8 +66,8 @@ nav.barraDeNavegacao {
     background-color: var(--cor-primaria-001);
     position: relative;
     left: 0;
-    width: 150px;
-    height: 50px;
+    width: 152px;
+    height: 52px;
     border: 1px solid black;
 }
 
@@ -176,8 +176,8 @@ nav.barraDeNavegacao {
 .wrapperTexto {
     align-content: center;
     height: 32px;
-    border-color: transparent;
     border-radius: 8px;
+    border-color: transparent;
     text-shadow: none;
     transition:
         background-color 0.3s ease,
@@ -194,7 +194,7 @@ nav.barraDeNavegacao {
 
 .li-wrapper:hover .wrapperTexto {
     background-color: #c37070;
-    border-bottom: 19px solid #c37070;
+    border-bottom: 10px solid #c37070;
     border-radius: 8px 8px 0 0;
 }
 

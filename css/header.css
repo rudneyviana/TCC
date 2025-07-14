@@ -241,7 +241,7 @@ header.scrolled .wrapperTexto {
 
 .li-wrapper:hover .wrapperTexto {
     background-color: #c37070;
-    border-bottom: 19px solid #c37070;
+    border-bottom: 10px solid #c37070;
     border-radius: 8px 8px 0 0;
 }
 
@@ -265,7 +265,7 @@ header.scrolled .li-wrapper:hover .wrapperTexto {
     flex-direction: row;
     justify-content: space-between;
     transition:
-        opacity 0.2s ease 0.3s,
+        opacity 0.2s ease 0.2s,
         top 0.3s ease;
 }
 

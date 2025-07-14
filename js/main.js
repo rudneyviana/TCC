@@ -269,7 +269,7 @@ function ocultarZoom() {
     if (scrollIndex < 0) scrollIndex = 0;
     if (scrollIndex > totalThumbs - maxVisible) scrollIndex = totalThumbs - maxVisible;
 
-    const offset = scrollIndex * 66; // 60px de altura + 6px de margin-bottom
+    const offset = scrollIndex * 66; //
     wrapper.style.transform = `translateY(-${offset}px)`;
 
     document.getElementById('btnCima').disabled = scrollIndex === 0;

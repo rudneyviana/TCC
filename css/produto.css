@@ -1,5 +1,4 @@
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -32,9 +31,9 @@ body {
 }
 
 .thumbnails {
-  height: 300px; /* altura da área visível de thumbs */
+  height: 300px; 
   overflow: hidden;
-  margin: 6px 0; /* espaço entre botões e thumbnails */
+  margin: 6px 0; 
 }
 
 .thumbWrapper {
