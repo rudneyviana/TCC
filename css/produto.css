@@ -205,6 +205,52 @@ body {
   background-color: #e2e2e2;
 }
 
+.acordeao {
+  background-color: #ddd;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.acordeao-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  cursor: pointer;
+  background-color: #ccc;
+  transition: background-color 0.3s ease;
+}
+
+.acordeao-header:hover {
+  background-color: #bbb;
+}
+
+.acordeao-conteudo-wrapper {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.acordeao.ativo .acordeao-conteudo-wrapper {
+  max-height: 500px; /* suficiente pro conteúdo real */
+}
+
+.acordeao-conteudo {
+  padding: 12px 16px;
+}
+
+.icone-seta {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s ease;
+}
+
+.acordeao.ativo .icone-seta {
+  transform: rotate(180deg);
+}
+
+
 
 @media (max-width: 768px) {
   .thumbnails {

@@ -64,7 +64,6 @@ document.querySelectorAll('.cor').forEach(cor => {
   });
 });
 
-// Marcar a primeira como padrão
 window.addEventListener('load', () => {
   const primeiraCor = document.querySelector('.cor');
   if (primeiraCor) {
@@ -79,4 +78,12 @@ function alterarQuantidade(delta) {
   if (valor < 1) valor = 1;
   input.value = valor;
 }
+
+document.querySelectorAll('.acordeao-header').forEach(header => {
+  header.addEventListener('click', () => {
+    const acordeao = header.parentElement;
+    acordeao.classList.toggle('ativo');
+  });
+});
+
 
