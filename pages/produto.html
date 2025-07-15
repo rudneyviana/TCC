@@ -225,14 +225,29 @@
                             <span class="precoNovo">R$149,90</span>
                             <span class="precoCredito">ou R$169,90 no crédito</span>
                         </div>
-                        <select>
-                            <option>Cor 1</option>
-                            <option>Cor 2</option>
-                            <option>Cor 3</option>
-                        </select>
-                        <br><br>
-                        <button>Comprar agora</button>
-                        <button>Adicionar ao carrinho</button>
+                        <div class="coresDisponiveis">
+                            <p>Cores disponíveis: <span id="nomeCor">( Cinza escuro )</span></p>
+                            <div class="opcoesCores">
+                                <div class="cor" data-nome="Cinza escuro" style="background-color: #333;"></div>
+                                <div class="cor" data-nome="Branco" style="background-color: #fff;"></div>
+                                <div class="cor" data-nome="Creme" style="background-color: #fdf2d1;"></div>
+                                <div class="cor" data-nome="Bege" style="background-color: #e4b186;"></div>
+                                <div class="cor" data-nome="Cinza claro" style="background-color: #aaa;"></div>
+                            </div>
+                        </div>
+                        <div class="acoesCompra">
+                            <div class="seletorQuantidade">
+                                <button class="btnQtd" onclick="alterarQuantidade(-1)">−</button>
+                                <input type="number" id="quantidade" value="1" min="1" />
+                                <button class="btnQtd" onclick="alterarQuantidade(1)">+</button>
+                            </div>
+
+                            <div class="botoesCompra">
+                                <button class="btnPrincipal">Comprar agora</button>
+                                <button class="btnSecundario">Adicionar ao carrinho</button>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>

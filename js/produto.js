@@ -50,8 +50,33 @@ function scrollThumbnails(direction) {
     document.getElementById('btnBaixo').disabled = scrollIndex >= totalThumbs - visibleCount;
 }
 
-
-
 window.onload = () => {
     scrollThumbnails(0);
 };
+
+document.querySelectorAll('.cor').forEach(cor => {
+  cor.addEventListener('click', () => {
+    document.querySelectorAll('.cor').forEach(c => c.classList.remove('selecionada'));
+
+    cor.classList.add('selecionada');
+
+    document.getElementById('nomeCor').textContent = `( ${cor.dataset.nome} )`;
+  });
+});
+
+// Marcar a primeira como padrão
+window.addEventListener('load', () => {
+  const primeiraCor = document.querySelector('.cor');
+  if (primeiraCor) {
+    primeiraCor.click();
+  }
+});
+
+function alterarQuantidade(delta) {
+  const input = document.getElementById('quantidade');
+  let valor = parseInt(input.value) || 1;
+  valor += delta;
+  if (valor < 1) valor = 1;
+  input.value = valor;
+}
+

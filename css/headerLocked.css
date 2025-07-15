@@ -214,7 +214,7 @@ nav.barraDeNavegacao {
     flex-direction: row;
     justify-content: space-between;
     transition:
-        opacity 0.2s ease 0.3s,
+        opacity 0.2s ease 0.2s,
         top 0.3s ease;
 }
 

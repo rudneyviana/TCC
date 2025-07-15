@@ -105,21 +105,122 @@ body {
   pointer-events: none;
 }
 
+.detalhesProduto{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.coresDisponiveis {
+  margin: 1rem 0;
+}
+
+.opcoesCores {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.cor {
+  width: 20px;
+  height: 20px;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+.cor.selecionada {
+  border: 2px solid #e74c3c;
+}
+
+.acoesCompra {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.seletorQuantidade {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.seletorQuantidade input {
+  width: 50px;
+  height: 36px;
+  text-align: center;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.btnQtd {
+  width: 36px;
+  height: 36px;
+  font-size: 1.2rem;
+  border: none;
+  background-color: #eee;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btnQtd:hover {
+  background-color: #ddd;
+}
+
+.botoesCompra {
+  display: flex;
+  gap: 10px;
+}
+
+.btnPrincipal,
+.btnSecundario {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btnPrincipal {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.btnPrincipal:hover {
+  background-color: #c0392b;
+}
+
+.btnSecundario {
+  background-color: #f1f1f1;
+  color: #333;
+  border: 1px solid #ccc;
+}
+
+.btnSecundario:hover {
+  background-color: #e2e2e2;
+}
+
+
 @media (max-width: 768px) {
   .thumbnails {
     overflow-y: auto;
-    scrollbar-width: none; /* Firefox */
+    scrollbar-width: none; 
   }
 
   .thumbnails::-webkit-scrollbar {
-    display: none; /* Chrome/Safari */
+    display: none; 
   }
 
   .thumbWrapper {
-    transform: none !important; /* remove translateY no mobile */
+    transform: none !important; 
   }
 
   .navegador {
-    display: none !important; /* oculta setas no mobile */
+    display: none !important; 
   }
 }
