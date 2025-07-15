@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="./../css/headerLocked.css">
     <link rel="stylesheet" href="./../css/footer.css">
     <link rel="stylesheet" href="./../css/cores.css">
-    <link rel="script" href="../js/produto.js">
 </head>
 
 <body>
@@ -193,8 +192,9 @@
             <div class="imagensProduto">
                 <div class="produto-container">
                     <div class="thumbnailNavegacao">
-                        <button class="navegador" id="btnCima" onclick="scrollThumbnails(-1)">▲</button>
-
+                        <div class="btnThumb">
+                            <button class="navegador" id="btnCima" onclick="scrollThumbnails(-1)">▲</button>
+                        </div>
                         <div class="thumbnails">
                             <div class="thumbWrapper" id="thumbWrapper">
                                 <img src="./../images/produto1.png" alt="Thumb2" onclick="trocarImagem(this)">
@@ -205,8 +205,9 @@
                                 <img src="./../images/produto1Miniatura5.png" alt="Thumb2" onclick="trocarImagem(this)">
                             </div>
                         </div>
-
-                        <button class="navegador" id="btnBaixo" onclick="scrollThumbnails(1)">▼</button>
+                        <div class="btnThumb">
+                            <button class="navegador" id="btnBaixo" onclick="scrollThumbnails(1)">▼</button>
+                        </div>
                     </div>
 
 

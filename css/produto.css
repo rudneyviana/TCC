@@ -24,14 +24,19 @@ body {
 }
 
 .thumbnailNavegacao {
-  width: 60px;
+  justify-content: space-around;
+  width: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+.btnThumb{
+  height: 30px;
+}
+
 .thumbnails {
-  height: 300px; 
+  height: 258px; 
   overflow: hidden;
   margin: 6px 0; 
 }
@@ -56,8 +61,8 @@ body {
 
 
 .thumbnails img {
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
   margin-bottom: 6px;
   object-fit: cover;
   cursor: pointer;
@@ -98,4 +103,23 @@ body {
   overflow: hidden;
   display: none;
   pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .thumbnails {
+    overflow-y: auto;
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .thumbnails::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+  }
+
+  .thumbWrapper {
+    transform: none !important; /* remove translateY no mobile */
+  }
+
+  .navegador {
+    display: none !important; /* oculta setas no mobile */
+  }
 }
