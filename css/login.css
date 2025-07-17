@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: sans-serif;
+    background-color: #3c3c3c;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.alternaFormulario {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+    color: white;
+    font-size: 0.9rem;
+}
+
+.containerFormulario {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d9d9d9;
+    overflow: hidden;
+    position: relative;
+}
+
+.form-unico {
+  width: 300px;
+  height: 400px; /* novo */
+  background-color: white;
+  padding: 20px;
+  position: absolute;
+  opacity: 1;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition:
+    right 0.4s ease,
+    height 0.4s ease,
+    width 0.4s ease;
+}
+
+.form-unico.expandido {
+  width: 600px;
+  height: 100%;
+  right: 0px;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    background-color: #ccc;
+    margin: 0 auto 10px auto;
+}
+
+h2 {
+    margin: 10px 0;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.agrupaFormulario {
+    margin-bottom: 10px;
+    max-width: 300px;
+}
+
+label {
+    font-size: 0.9rem;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+}
+
+button[type="submit"] {
+    padding: 10px;
+    background-color: #888;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
