@@ -1,5 +1,7 @@
 # Sistema E-commerce Ane Cortinas e Decorações
 
+<img width="1920" height="957" alt="Página Inicial" src="https://github.com/user-attachments/assets/f9b24792-e4ab-4c6a-9d39-b3745d808fff" />
+
 ## 📋 Sobre o Projeto
 
 Este projeto é o resultado do Trabalho de Conclusão de Curso (TCC) que propõe o desenvolvimento de um sistema integrado de e-commerce e gestão para a empresa **Ane Cortinas e Decorações LTDA**. O objetivo é modernizar as operações atualmente manuais e presenciais da empresa, proporcionando uma plataforma digital completa para vendas online e gestão empresarial.
